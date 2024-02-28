@@ -1,11 +1,20 @@
+import { FC } from 'react' 
+import { Provider } from 'react-redux' 
 
-import './App.css'
+import { store } from './service/store'
 
-const App = () => {
+import HomePage from './pages/home/home'
+import Header from './widgets/header/header'
+
+
+const App: FC = () => {
 
   return (
     <>
-       <span>hello</span>
+       <Provider store={store}>
+           <Header />
+           <HomePage />
+       </Provider>
     </>
   )
 }

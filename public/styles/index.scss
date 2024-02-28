@@ -1,0 +1,19 @@
+@import './reset.scss';
+@import './var.scss';
+
+
+html,body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+img{
+    user-select: none;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    background: $back-main;
+    overflow-x: hidden;
+}

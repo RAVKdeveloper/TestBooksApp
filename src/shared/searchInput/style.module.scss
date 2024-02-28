@@ -1,0 +1,26 @@
+@import '../../../public/styles/var.scss';
+
+.root{
+    position: relative;
+}
+
+
+.input{
+    width: 574px;
+    border: 1px solid $border-color;
+    height: 42px;
+    padding: 0 37px 0 21px;
+    font-size: 16px;
+    color: $color-main;
+    border-radius: 4px;
+}
+
+.remove{
+    position: absolute;
+    color: $noactive-color;
+    width: 22px;
+    height: 22px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
