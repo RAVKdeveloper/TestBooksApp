@@ -17,3 +17,10 @@ main{
     background: $back-main;
     overflow-x: hidden;
 }
+
+.container{
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 .625rem;
+    padding-bottom: 40px;
+}

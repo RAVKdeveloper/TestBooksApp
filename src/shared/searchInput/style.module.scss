@@ -24,3 +24,15 @@
     right: 10px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 900px) {
+     .input{
+        width: 300px;
+     }
+}
+
+@media screen and (max-width: 400px) {
+    .input{
+       width: 230px;
+    }
+}

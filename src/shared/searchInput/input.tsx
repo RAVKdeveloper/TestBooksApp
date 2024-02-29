@@ -3,7 +3,7 @@ import debounce from 'lodash.debounce'
 import s from './style.module.scss'
 
 import { useAppDispatch } from "../../service/hooks/hooks";
-import { setSearchValue } from "../../service/slices/sortingBooks/sortingBooks.slice";
+import { setSearchValue, setIsFetchRequest } from "../../service/slices/sortingBooks/sortingBooks.slice";
 
 import { IoMdClose } from "react-icons/io";
 
@@ -28,6 +28,10 @@ const SearchInput: FC = () => {
         dispatch(setSearchValue(''))
     }
 
+    const fetchSearchKeyBoard = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if(e.key === 'Enter') dispatch(setIsFetchRequest())
+    } 
+
     return (
     
         <div className={s.root}>
@@ -36,6 +40,7 @@ const SearchInput: FC = () => {
              placeholder='Найти книгу'
              value={value}
              onChange={changeInput}
+             onKeyPress={fetchSearchKeyBoard}
             />
             {
                 value &&

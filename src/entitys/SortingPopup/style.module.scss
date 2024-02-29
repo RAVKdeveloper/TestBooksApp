@@ -1,0 +1,83 @@
+@import '../../../public/styles/var.scss';
+
+.root{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: 100vh;
+    width: 370px;
+    max-width: 400px;
+    background: $back-main;
+    z-index: 1000;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2.5s ease;
+}
+
+.root.open{
+    opacity: 1;
+    pointer-events: all;
+    transition: all .2.5s ease;
+}
+
+.titleRow{
+    height: 57px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    color: $color-main;
+}
+
+.close{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+.list{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+   .sort{
+      color: #787878;
+      cursor: pointer;
+      user-select: none;  
+      transition: color .2s ease;
+   }
+
+   .sort.active{
+      color: $color-blue;
+      transition: color .2s ease;
+   }
+
+   .sort:hover{
+      color: $color-blue;
+      transition: color .2s ease;
+   }
+}
+
+.sortTitle{
+    padding-left: 16px;
+    padding-top: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: $color-main;
+}
+
+
+@media screen and (max-width: 400px) {
+     .root{
+        width: 280px;
+     }
+}

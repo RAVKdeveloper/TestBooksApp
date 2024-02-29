@@ -1,0 +1,28 @@
+@import '../../../public/styles/var.scss'; 
+
+.root{
+    width: 140px;
+    max-width: 140px;
+    height: 44px;
+    border: 1px solid #f9c2c8;
+    border-radius: 6px;
+    background: transparent;
+    font-size: 16px;
+    color: $color-accent;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+.root:hover{
+    background: #ffeaec;
+    transition: all .3s ease;
+}
+
+
+@media screen and (max-width: 500px) {
+     .root{
+        width: 110px;
+        height: 35px;
+        font-size: 14px;
+     }
+}

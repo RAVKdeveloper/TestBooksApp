@@ -1,0 +1,33 @@
+@import '../../../public/styles/var.scss';
+
+
+.root{
+    width: 64px;
+    height: 42px;
+    background: $color-accent;
+    transition: all .2s ease;
+
+    & .icon{
+        color: $color-white;
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover{
+        background: #e3273e;
+        transition: all .2s ease;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+     .root{
+        width: 30px;
+        border-radius: 2px;
+
+        & .icon{
+            width: 14px;
+            height: 14px;
+        }
+     }
+}

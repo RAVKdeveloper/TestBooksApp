@@ -1,12 +1,16 @@
 import { FC } from "react"; 
 
+import CardList from "../../features/CardList/cardList";
+
 
 const HomePage: FC = () => {
 
     return (
 
         <main>
-            hello
+            <div className="container">
+            <CardList />
+            </div>
         </main>
     )
 } 
